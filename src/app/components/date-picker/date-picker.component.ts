@@ -11,9 +11,19 @@ export class DatePickerComponent implements OnInit {
 
  formularioReserva: FormGroup = new FormGroup ({});
 
- constructor(private formBuilder: FormBuilder) {}
+ constructor(private formBuilder: FormBuilder) {
 
- ngOnInit(): void {
-     
- }
+  const hoy = new Date();
+  const mes = hoy.getMonth();
+  const anio = hoy.getFullYear();
+
+  this.formularioReserva = this.formBuilder.group ({
+    desde: new FormControl(new Date(anio, mes, 15)),
+    hasta: new FormControl(new Date(anio, mes, 19))
+ })
+}
+
+ ngOnInit(): void {}
+ 
+
 }
