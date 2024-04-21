@@ -8,6 +8,7 @@ import { MaterialModule } from './modules/material/material.module';
 import { DatePickerComponent, } from './components/date-picker/date-picker.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
   ],
   providers: [
     provideAnimationsAsync()
